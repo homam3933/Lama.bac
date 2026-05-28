@@ -276,6 +276,11 @@ export default function App() {
         <div style={{ margin: "0 20px" }}>
           {daysLeft !== null && (
             <div style={{ ...styles.counter, padding: "16px", margin: 0 }}>
+              <div style="display:flex;gap:6px;margin-bottom:8px">
+  <button class="btn" onclick="exportData()" style="font-size:12px;padding:4px 10px">📤 تصدير</button>
+  <button class="btn" onclick="document.getElementById('importFile').click()" style="font-size:12px;padding:4px 10px">📥 استيراد</button>
+  <input type="file" id="importFile" accept=".json" style="display:none" onchange="importData(event)">
+</div>
               <span style={{ fontSize: "14px", opacity: 0.9 }}>⏰ تبقى </span>
               <span style={{ fontSize: "22px", fontWeight: "900" }}>{daysLeft}</span>
               <span style={{ fontSize: "14px", opacity: 0.9 }}> يوم للامتحان!</span>
